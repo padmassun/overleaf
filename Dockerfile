@@ -96,6 +96,8 @@ ENV SHARELATEX_APP_NAME "Overleaf Community Edition - Full Latex Package"
 
 ENV OPTIMISE_PDF "true"
 
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+
 RUN apt-get install -y texlive-full
 
 RUN tlmgr update --self
