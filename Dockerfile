@@ -98,7 +98,7 @@ ENV OPTIMISE_PDF "true"
 
 RUN tlmgr update --self
 
-RUN tlmgr install scheme-full
+RUN tlmgr install scheme-full; exit 0
 
 RUN tlmgr update -all
 
