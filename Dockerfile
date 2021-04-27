@@ -100,6 +100,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt-get install -y texlive-full
 
+RUN apt-get install xzdec
+
 RUN tlmgr init-usertree
 
 RUN tlmgr update --self
