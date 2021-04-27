@@ -92,10 +92,15 @@ COPY ${baseDir}/settings.coffee /etc/sharelatex/settings.coffee
 # --------------------------------
 ENV WEB_API_USER "sharelatex"
 
-ENV SHARELATEX_APP_NAME "Overleaf Community Edition"
+ENV SHARELATEX_APP_NAME "Overleaf Community Edition - Full Latex Package"
 
 ENV OPTIMISE_PDF "true"
 
+RUN tlmgr update --self
+
+RUN tlmgr install scheme-full
+
+RUN tlmgr update -all
 
 EXPOSE 80
 
